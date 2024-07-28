@@ -1,9 +1,9 @@
-const { BookingService } = require("../service/create-service");
+const { BookingRepository } = require("../service/create-service");
 
-const bookingservice = new BookingService();
+const bookingrepository = new BookingRepository();
 const booking = async (req, res) => {
   try {
-    const response = await bookingservice(req.body);
+    const response = await bookingrepository(req.body);
     return response.status(200).json({
       data: null,
       message: "bookin created succesfully",
